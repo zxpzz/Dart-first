@@ -46,7 +46,12 @@ void main(List<String> args) {
   var list4=[0,1,2];
   var list5=[for(int i in list4) '我是${i}'];
   print(list5);
-
-  
-
+// 使用 [] 将一系列参数包裹起来，即可将其标记为位置参数
+  String say(String from,String msg,[String? dev]){
+    if(dev!=null){
+      return dev;
+    }
+    return from+msg;
+  }
+  print(say('hello','nihao','dev'));
 }
